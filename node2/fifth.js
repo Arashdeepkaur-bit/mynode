@@ -4,12 +4,12 @@ var con = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "05062003",
-    database: "cust"
+    database: "student"
 });
 
 con.connect(function(err) {
     if (err) throw err;
-    var sql = "select * from customer";
+    var sql = "select * from employ";
     con.query(sql, function(err, result) {
         if (err) throw err;
         console.log(result);
