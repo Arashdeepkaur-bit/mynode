@@ -3,14 +3,14 @@ var mysql = require('mysql2');
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "root",
-    database: "june2024"
+    password: "05062003",
+    database: "customer"
 });
 
 con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
-    var sql = "CREATE TABLE customers (name VARCHAR(255),address VARCHAR(255))";
+    var sql = "CREATE TABLE custo (name VARCHAR(255),address VARCHAR(255))";
     con.query(sql, function(err, result) {
         if (err) throw err;
         console.log("Table created");

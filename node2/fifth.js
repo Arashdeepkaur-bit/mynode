@@ -3,13 +3,13 @@ var mysql = require('mysql2');
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "root",
-    database: "june2024"
+    password: "05062003",
+    database: "custo"
 });
 
 con.connect(function(err) {
     if (err) throw err;
-    var sql = "select * from customers";
+    var sql = "select * from customer";
     con.query(sql, function(err, result) {
         if (err) throw err;
         console.log(result);
