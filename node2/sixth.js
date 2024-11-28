@@ -4,12 +4,12 @@ var con = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "05062003",
-    database: "custo"
+    database: "cust"
 });
 
 con.connect(function(err) {
     if (err) throw err;
-    var sql = "delete from customer where id=3";
+    var sql = "delete from custome where id=3";
     con.query(sql, function(err, result) {
         if (err) throw err;
 
